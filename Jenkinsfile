@@ -38,7 +38,7 @@ pipeline {
                 }
         stage('Deploy Docker application in Docker Deployment Server') {
             steps {
-                     sh "docker run -d -p 8888:8888 --name eureka-server rajivbansal2981/eureka-server:${BUILD_NUMBER}"
+                     sh "docker run -d -p 8761:8761 --name eureka-server rajivbansal2981/eureka-server:${BUILD_NUMBER}"
             }
         }
     }
